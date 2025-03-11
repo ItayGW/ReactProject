@@ -5,17 +5,24 @@ const connectDB = require('./lib/connect')
 const bcrypt = require('bcrypt')
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const path = require('path');
 
 
 app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin:['http://localhost:5173'],
+  origin:['http://localhost:5173','https://reactproject-lc8b.onrender.com'],
   credentials: true,
 }));
 
+app.use(express.static(path.join(__dirname,'public')));
+
 app.use('/api',routes);
+
+app.get('*', (req,res) => {
+  res.sendFile(path.join(__dirname,'public','index.html'));
+});
 
 console.log(process.env.DB_URL)
 
