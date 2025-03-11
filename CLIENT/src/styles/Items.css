@@ -133,3 +133,9 @@
     font-size: 1.5rem;
     color: #6b7280;
   }
+
+  .table-container{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }

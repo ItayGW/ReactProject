@@ -168,7 +168,7 @@ export const Expenses = () => {
 
       <Filter inputSearch={inputSearch} setInputSearch={setInputSearch} SelectedFilter={SelectedFilter} setSelectedFilter={setSelectedFilter} maxAmount={maxAmount} />
 
-      {filteredExpenses.length ? (<table className='item-table'>
+      {filteredExpenses.length ? ( <div className='table-container'><table className='item-table'>
         <thead>
           <tr>
             <th>Title</th>
@@ -196,7 +196,7 @@ export const Expenses = () => {
 
 
         </tbody>
-      </table>) : inputSearch ? (<p className='not-found'>"{inputSearch}" Not Found</p>) : (<p className='not-found'>No Expense Found...</p>)};
+      </table> </div>) : inputSearch ? (<p className='not-found'>"{inputSearch}" Not Found</p>) : (<p className='not-found'>No Expense Found...</p>)};
     </main>
   )
 }
