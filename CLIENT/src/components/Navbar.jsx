@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router';
-import '..styles/Navbar.css';
+import '../styles/Navbar.css';
 import { logout } from '../api/auth';
 
 export const Navbar = () => {

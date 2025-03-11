@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import '..//styles/AuthForm.css';
+import '../styles/AuthForm.css';
 import { signUp, signIn } from '../api/auth';
 import { toast } from 'react-toastify';
 
